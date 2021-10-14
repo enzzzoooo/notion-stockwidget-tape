@@ -4,44 +4,60 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Notion Stock Widget</title>
-    <link rel="stylesheet" href="style.css" />
   </head>
   <body class="light">
     </div>
 <!-- TradingView Widget BEGIN -->
 <div class="tradingview-widget-container">
-  <div class="tradingview-widget-container__widget"></div>
-  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener" target="_blank"></a></div>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+  <div id="tradingview_f222b"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/BTCUSDT/?exchange=BINANCE" rel="noopener" target="_blank"><span class="blue-text">BTC</span></a> by TradingView</div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
+  new TradingView.MediumWidget(
   {
   "symbols": [
-    {
-      "proName": "BITSTAMP:BTCUSD",
-      "title": "BTC/USD"
-    },
-    {
-      "proName": "BITSTAMP:ETHUSD",
-      "title": "ETH/USD"
-    },
-    {
-      "description": "SLP/PHP",
-      "proName": "SLPUSDT*FX_IDC:USDPHP"
-    },
-    {
-      "description": "AXS/USD",
-      "proName": "BINANCE:AXSUSDT"
-    },
-    {
-      "description": "CAKE/USD",
-      "proName": "BINANCE:CAKEUSDT"
-    }
+    [
+      "BTC",
+      "BINANCE:BTCUSDT|1D"
+    ],
+    [
+      "ETH",
+      "BINANCE:ETHUSDT|1D"
+    ],
+    [
+      "SLP",
+      "SLPUSDT*FX_IDC:USDPHP|1M"
+    ],
+    [
+      "AXS",
+      "BINANCE:AXSUSDT|12M"
+    ],
+    [
+      "CAKE",
+      "BINANCE:CAKEUSDT|1M"
+    ]
   ],
-  "showSymbolLogo": true,
+  "chartOnly": false,
+  "width": "1000",
+  "height": "400",
+  "locale": "en",
   "colorTheme": "light",
-  "isTransparent": true,
-  "displayMode": "regular",
-  "locale": "en"
+  "gridLineColor": "rgba(240, 243, 250, 0)",
+  "fontColor": "rgba(0, 0, 0, 1)",
+  "isTransparent": false,
+  "autosize": false,
+  "showFloatingTooltip": true,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "Trebuchet MS, sans-serif",
+  "noTimeScale": false,
+  "chartType": "area",
+  "lineColor": "#2962FF",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "container_id": "tradingview_f222b"
 }
+  );
   </script>
 </div>
 <!-- TradingView Widget END -->
